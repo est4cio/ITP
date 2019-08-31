@@ -1,0 +1,31 @@
+lógica:
+
+1) se as cinco cartas estiverem em sequência, a pontuação é: carta 1 + 200 pontos
+
+    dadas 5 cartas, analisar se vem em sequência. Se sim, o acumulador de pontos recebe menor carta + 200.
+
+2) se há quatro cartas iguais, a pontuação é: carta repetida + 180
+
+    dadas 5 cartas, analisar se há uma quadra. Caso haja, o acumulador de pontos recebe carta + 180.
+
+3) se há uma trinca e uma dupla, a pontuação é: carta da trinca + 160
+
+    a partir da análise presente no caso 4,  se houver uma trinca e uma dupla, o acumulador de pontos
+        recebe carta da trinca + 160.
+
+4) se há só uma trinca, a pontuação é: carta da trinca + 140
+
+    dadas 5 cartas, analisar se há uma trinca apenas, ou há também um par. Na segunda hipótese, realizar
+        caso 3. Na primeira, o acumulador de pontos recebe o valor da carta da trinca + 140.
+
+5) se há dois pares diferentes, a pontuação é: 3*carta do maior par + 2*carta do menor + 20
+
+    a partir da análise presente no caso 6, se houver dois pares, o acumulador de pontuação, recebe
+        o cálculo feito acima.
+
+6) se há só um par, a pontuação é: carta do par
+
+    dadas 5 cartas, analisar se há um ou dois pares. Caso haja dois, resolver caso 5. Caso haja um,
+        o acumulador de pontuação recebe o valor da carta do par.
+
+7) não ocorrendo nenhuma das situações acima, a pontuação é 0.
